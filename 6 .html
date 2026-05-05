@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <meta charset="utf-8" /> 
+        <link rel="stylesheet" href="less6.css" /> 
+    </head> 
+    <style>
+        div {
+            position: absolute; 
+            border: 2px solid black; 
+            padding: 3px; 
+        }
+        #scroll { 
+            overflow: scroll; 
+            top: 10%;
+            bottom: 10%;
+            left: 0; 
+            right: 20%; 
+        }
+        #hidden { 
+            overflow: hidden; 
+            top: 30%; 
+            left: 10%; 
+            width: 150px;
+            height: 97px; 
+        } 
+        #visible { 
+            overflow: visible; 
+            top: 100px;
+            right: 50px;
+            max-width: 150px; 
+            max-height: 97px; 
+        } 
+        #div1, #div2 { 
+            position: absolute; 
+            width: 320px;
+            height: 320px; 
+        }
+        #div1 { 
+            background-image: url(smle.png); 
+        }
+        #div2 { 
+            clip: rect(10px 240px 280px 20px); 
+            background-color: Blue; 
+        }
+    </style>
+    <body>
+        <div id="scroll">
+            Эта секция имеет значение scroll свойства overflow. Поэтому полосы 
+прокрутки показаны, хотя и не нужны. 
+        </div>
+        <div id="hidden"> 
+            Эта секция имеет значение hidden свойства overflow. Поэтому 
+непоместившийся в нее текст остается невидимым. 
+         </div> 
+         <div id="visible"> 
+            Эта секция имеет значение visible свойства overflow. Поэтому часть 
+текста (если его много) может выходить за ее границы. 
+         </div> 
+<div id="div1"></div>  
+<div id="div2"></div> 
+    </body>
+</html>
